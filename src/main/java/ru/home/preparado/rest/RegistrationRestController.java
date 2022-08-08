@@ -6,6 +6,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.home.preparado.dto.BooleanDTO;
 import ru.home.preparado.dto.LoginDTO;
 import ru.home.preparado.service.UserService;
 
@@ -19,8 +20,8 @@ public class RegistrationRestController {
         this.userService = userService;
     }
 
-    @RequestMapping("sign-up")
-    public ResponseEntity<Boolean> checkEmail(@Validated @RequestBody LoginDTO loginDTO) {
+    @RequestMapping("check-login")
+    public ResponseEntity<BooleanDTO> checkEmail(@Validated @RequestBody LoginDTO loginDTO) {
         return new ResponseEntity<>(userService.existByLogin(loginDTO.getLogin()), HttpStatus.OK);
     }
 }

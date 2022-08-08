@@ -7,22 +7,30 @@ function back() {
 }
 
 function checkLogin() {
-    const login = {
-        login: document.getElementById("login").value
-    }
-
-    post('/api/sign-up', JSON.stringify(login));
+    let inputElement = document.getElementById("login");
+    let login = inputElement.value;
+    post('/api/check-login',
+        {login: inputElement.value},
+        (response) => {
+            if (response.exist) {
+                inputElement.value = '';
+                inputElement.setAttribute('placeholder', 'Введите пароль')
+            } else {
+                inputElement.value = '';
+                inputElement.setAttribute('placeholder', 'Введите код')
+            }
+        });
 }
 
-function post(url, body) {
+function post(url, body, callback) {
     const request = new XMLHttpRequest();
-    request.open('POST',  url, true);
+    request.open('POST', url, true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.onload = function () {
-        console.log(this.response);
+        callback(JSON.parse(this.response));
     };
     request.onerror = function () {
         console.log("error");
     }
-    request.send(body);
+    request.send(JSON.stringify(body));
 }

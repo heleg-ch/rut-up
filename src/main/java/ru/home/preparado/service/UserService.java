@@ -1,6 +1,7 @@
 package ru.home.preparado.service;
 
 import org.springframework.stereotype.Service;
+import ru.home.preparado.dto.BooleanDTO;
 import ru.home.preparado.repository.UserRepository;
 
 @Service
@@ -12,7 +13,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public boolean existByLogin(String login) {
-        return userRepository.existsByLogin(login);
+    public BooleanDTO existByLogin(String login) {
+        return new BooleanDTO(userRepository.existsByLogin(login));
     }
 }

@@ -3,15 +3,14 @@
 <html xmlns:th="https://www.thymeleaf.org"
       th:replace="~{fragments/layout :: layout (~{::body})}">
 <body>
-<div class="container h-100">
-    <div class="row">
-        <div class="col">
-            <div style="height: 500px">
-                <button type="button" th:onclick="showAlert()">Show Alert</button>
-            </div>
-        </div>
-    </div>
+
+<div class="registration-card">
+    <form action="">
+        <input type="text" name="login" style="margin-bottom: 10px" id="login" placeholder="Почта или номер телефона"
+               class="text-field">
+        <button type="button" class="button-b" th:onclick="checkLogin()">Продолжить</button>
+        <button type="button" class="button-b" th:onclick="back()">Назад</button>
+    </form>
 </div>
-<script type="text/javascript" th:src="@{/js/action.js}"></script>
 </body>
 </html>

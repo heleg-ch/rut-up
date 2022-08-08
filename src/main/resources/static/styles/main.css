@@ -12,6 +12,20 @@
     align-items: center;
 }
 
+.registration-card {
+    background-color: white;
+    min-height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .text-field {
     border-radius: 6px;
     border: 1px solid darkcyan;
@@ -21,9 +35,10 @@
     width: 90%
 }
 
-.button {
+.button-b {
+    margin-bottom: 10px;
     border-radius: 6px;
-    width: 270px;
+    width: 90%;
     border: 1px solid darkcyan;
     font-family: inherit;
     font-size: 1rem;

@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "ru.home.preparado.config")
+@EnableMongoRepositories(basePackages = "ru.home.preparado.repository")
 public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override

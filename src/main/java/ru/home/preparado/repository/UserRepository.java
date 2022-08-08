@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.home.preparado.model.User;
 
 @Repository
-interface UserRepository extends MongoRepository<User, String> {
+public interface UserRepository extends MongoRepository<User, String> {
+    boolean existsByLogin(String login);
 }

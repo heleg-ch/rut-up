@@ -11,7 +11,7 @@ import ru.home.preparado.dto.LoginDTO;
 import ru.home.preparado.service.UserService;
 
 @RestController
-@RequestMapping("api/")
+@RequestMapping("api/registration/")
 public class RegistrationRestController {
 
     private final UserService userService;
@@ -20,8 +20,8 @@ public class RegistrationRestController {
         this.userService = userService;
     }
 
-    @RequestMapping("check-login")
+    @RequestMapping("login")
     public ResponseEntity<BooleanDTO> checkEmail(@Validated @RequestBody LoginDTO loginDTO) {
-        return new ResponseEntity<>(userService.existByLogin(loginDTO.getLogin()), HttpStatus.OK);
+        return new ResponseEntity<>(userService.firstStepRegistration(loginDTO.getLogin()), HttpStatus.OK);
     }
 }

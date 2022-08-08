@@ -9,7 +9,7 @@ function back() {
 function checkLogin() {
     let inputElement = document.getElementById("login");
     let login = inputElement.value;
-    post('/api/check-login',
+    post('/api/registration/login',
         {login: inputElement.value},
         (response) => {
             if (response.exist) {

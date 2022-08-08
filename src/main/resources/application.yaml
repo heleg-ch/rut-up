@@ -1,0 +1,7 @@
+spring:
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: preparado.service@yandex.ru
+    password: ${SMTP_PASSWORD}
+    protocol: smtps

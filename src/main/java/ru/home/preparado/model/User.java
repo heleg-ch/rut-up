@@ -9,6 +9,7 @@ public class User {
     private String login;
     private String password;
     private String name;
+    private String activationKey;
 
     public String getId() {
         return id;
@@ -40,5 +41,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getActivationKey() {
+        return activationKey;
+    }
+
+    public void setActivationKey(String activationKey) {
+        this.activationKey = activationKey;
     }
 }

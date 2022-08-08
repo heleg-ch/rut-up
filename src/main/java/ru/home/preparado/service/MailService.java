@@ -13,6 +13,7 @@ public class MailService {
     private final MailSender mailSender;
 
 
+
     public MailService(MailSender mailSender, Environment env) {
         this.mailSender = mailSender;
         this.ADDRESS = env.getProperty("spring.mail.username");

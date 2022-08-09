@@ -3,6 +3,6 @@ version: '3.9'
 services:
   mongodb:
     image: mongo:latest
-    container_name: preparado
+    container_name: rut-up
     ports:
       - "27018:27017"

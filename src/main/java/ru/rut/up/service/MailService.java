@@ -1,4 +1,4 @@
-package ru.home.preparado.service;
+package ru.rut.up.service;
 
 import org.springframework.core.env.Environment;
 import org.springframework.mail.MailSender;

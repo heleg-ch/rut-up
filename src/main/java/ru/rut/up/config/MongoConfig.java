@@ -1,4 +1,4 @@
-package ru.home.preparado.config;
+package ru.rut.up.config;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "ru.home.preparado.repository")
+@EnableMongoRepositories(basePackages = "ru.rut.up.repository")
 public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
@@ -19,7 +19,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        final ConnectionString connectionString = new ConnectionString("mongodb://localhost:27018/preparado");
+        final ConnectionString connectionString = new ConnectionString("mongodb://localhost:27018/rut-up");
         final MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();

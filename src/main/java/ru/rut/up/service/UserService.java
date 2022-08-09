@@ -1,10 +1,10 @@
-package ru.home.preparado.service;
+package ru.rut.up.service;
 
 import org.springframework.stereotype.Service;
-import ru.home.preparado.dto.BooleanDTO;
-import ru.home.preparado.model.User;
-import ru.home.preparado.repository.UserRepository;
-import ru.home.preparado.util.RandomGeneratorUtil;
+import ru.rut.up.dto.BooleanDTO;
+import ru.rut.up.model.User;
+import ru.rut.up.repository.UserRepository;
+import ru.rut.up.util.RandomGeneratorUtil;
 
 @Service
 public class UserService {

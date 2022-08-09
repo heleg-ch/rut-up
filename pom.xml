@@ -8,11 +8,11 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ru.home</groupId>
-	<artifactId>preparado</artifactId>
+	<groupId>ru.rut</groupId>
+	<artifactId>up</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>preparado</name>
-	<description>preparado</description>
+	<name>rut-up</name>
+	<description>rut-up</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

@@ -1,4 +1,4 @@
-package ru.home.preparado.model;
+package ru.rut.up.model;
 
 import org.springframework.data.annotation.Id;
 

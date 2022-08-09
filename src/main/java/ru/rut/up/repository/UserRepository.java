@@ -1,8 +1,8 @@
-package ru.home.preparado.repository;
+package ru.rut.up.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-import ru.home.preparado.model.User;
+import ru.rut.up.model.User;
 
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {

@@ -1,4 +1,4 @@
-package ru.home.preparado.util;
+package ru.rut.up.util;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

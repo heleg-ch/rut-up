@@ -1,10 +1,10 @@
-package ru.home.preparado;
+package ru.rut.up;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PreparadoApplicationTests {
+class RutUpApplicationTests {
 
 	@Test
 	void contextLoads() {

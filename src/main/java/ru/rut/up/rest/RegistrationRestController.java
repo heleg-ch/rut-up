@@ -1,4 +1,4 @@
-package ru.home.preparado.rest;
+package ru.rut.up.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -6,9 +6,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.home.preparado.dto.BooleanDTO;
-import ru.home.preparado.dto.LoginDTO;
-import ru.home.preparado.service.UserService;
+import ru.rut.up.dto.BooleanDTO;
+import ru.rut.up.dto.LoginDTO;
+import ru.rut.up.service.UserService;
 
 @RestController
 @RequestMapping("api/registration/")

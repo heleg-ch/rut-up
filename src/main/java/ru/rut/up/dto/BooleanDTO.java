@@ -1,4 +1,4 @@
-package ru.home.preparado.dto;
+package ru.rut.up.dto;
 
 public class BooleanDTO {
 

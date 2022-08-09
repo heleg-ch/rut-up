@@ -1,25 +1,33 @@
-function showAlert() {
-    alert("The button was clicked!");
-}
-
 function back() {
     window.history.back();
 }
 
 function checkLogin() {
-    let inputElement = document.getElementById("login");
-    let login = inputElement.value;
+    let inputLoginElement = document.getElementById("login");
+    let inputPasswordElement = document.getElementById("password");
+    let button = document.getElementById("register-button");
+
     post('/api/registration/login',
-        {login: inputElement.value},
+        {login: inputLoginElement.value},
         (response) => {
+            inputLoginElement.style.display = 'none';
+            inputPasswordElement.style.display = 'inline';
             if (response.exist) {
-                inputElement.value = '';
-                inputElement.setAttribute('placeholder', 'Введите пароль')
+                inputPasswordElement.setAttribute('placeholder', 'Введите пароль');
+                button.onclick = signIn;
             } else {
-                inputElement.value = '';
-                inputElement.setAttribute('placeholder', 'Введите код')
+                inputPasswordElement.setAttribute('placeholder', 'Введите код');
+                button.onclick = confirmActivationCode;
             }
         });
+}
+
+function signIn() {
+    console.log('SignIn');
+}
+
+function confirmActivationCode() {
+    console.log('Activate Code');
 }
 
 function post(url, body, callback) {

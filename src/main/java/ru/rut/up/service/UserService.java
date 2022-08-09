@@ -25,7 +25,7 @@ public class UserService {
             final String code = RandomGeneratorUtil.getCode();
             newUser.setActivationKey(code);
             userRepository.save(newUser);
-            mailService.sendMessage(login, code);
+            //mailService.sendMessage(login, code);
 
         }
         return new BooleanDTO(userExist);

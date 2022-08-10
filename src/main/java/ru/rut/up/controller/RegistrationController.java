@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ru.rut.up.dto.RegistrationDTO;
+import ru.rut.up.exception.EntityNotFoundException;
 import ru.rut.up.service.UserService;
 
 @Controller
@@ -26,7 +27,8 @@ public class RegistrationController {
     @RequestMapping(value = "/sign-up", method = RequestMethod.POST)
     public String signUp(@ModelAttribute RegistrationDTO registrationDTO) {
         userService.registerNewUser(registrationDTO);
-        return "forms/registration";
+        throw new EntityNotFoundException("test");
+        //return "forms/registration";
     }
 
 
